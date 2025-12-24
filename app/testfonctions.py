@@ -7,7 +7,7 @@ import Fonctions
 db = SessionLocal()
 # %%
 # Tester la récupération de films
-movies = Fonctions.get_movies(db, limit=5, genre="Comedy")
+movies =Fonctions.get_movies(db, limit=5, genre="Comedy")
 
 for movie in movies:
     print(f"ID: {movie.movieId}, Titre: {movie.title}, Genres: {movie.genres}")
@@ -15,3 +15,4 @@ for movie in movies:
 # %%
 # Fermer la session
 db.close()
+# %%
