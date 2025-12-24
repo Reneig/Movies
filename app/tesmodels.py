@@ -1,3 +1,4 @@
+
 # %%
 from database import SessionLocal
 from models import Movie, Rating, Tag, Link
@@ -30,7 +31,7 @@ for rating in Ratings:
 # %%
 # Films avec une note supérieure ou égale à 4
 high_rated_movies = db.query(Movie).join(Rating).filter(Rating.rating >= 4).limit(5).all()
-
+# %%
 for title, rating in high_rated_movies:
     print(title, rating)
     
