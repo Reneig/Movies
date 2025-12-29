@@ -5,9 +5,9 @@ build-backend = "setuptools.build_meta"
  name = "moviemanagement"
  version = "0.0.3"
  authors = [ 
-  { name="[Rene, Cybelle, Giovani]" }, 
+  { name="[Rene]" }, 
 ] 
-description = "Package for Movie Management Application"
+description = "Package for Movie Management API"
 readme= "README.md"
  license = { file = "LICENSE" }
  requires-python = ">=3.13"
