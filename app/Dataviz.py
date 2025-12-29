@@ -2,8 +2,16 @@
 
 #%%
 # Importation des librairies nécessaires
-import requests
+# Importation des librairies nécessaires
 import pandas as pd
+import plotly.express as px
+import matplotlib.pyplot as plt
+import seaborn as sns
+from filmsdk import MovieClient, MovieConfig
+import time
+import json
+from collections import Counter, defaultdict
+from pathlib import Path
 #%%
 # URL de ton API Render (endpoint)
 url = "https://movies-management-0ypw.onrender.com/movies"  # adapte le endpoint
