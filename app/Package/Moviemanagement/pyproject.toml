@@ -4,9 +4,11 @@ build-backend = "setuptools.build_meta"
 [project]
  name = "moviemanagement"
  version = "0.0.3"
- authors = [ 
-  { name="[Rene]" }, 
-] 
+ authors = [
+  { name = "Rene" },
+  { name = "Cybelle" },
+  { name = "Giovani" }
+]
 description = "Package for Movie Management API"
 readme= "README.md"
  license = { file = "LICENSE" }
