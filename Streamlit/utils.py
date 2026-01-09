@@ -3,7 +3,8 @@ from pathlib import Path
 import pandas as pd
 
 # Définir le répertoire de sortie
-OUTPUT_DIR = Path(__file__).resolve().parent.parent / "output"
+BASE_DIR = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = BASE_DIR / "Data_visualization" / "output"
 
 # Fonction pour charger les données avec cache
 @st.cache_data

@@ -6,20 +6,20 @@ import os
 from utils import load_parquet_data
 
 # Définition du dossier de sortie
-OUTPUT_DIR = Path(__file__).resolve().parent.parent / "output"
-
+BASE_DIR = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = BASE_DIR / "Data_visualization" / "output"
 st.title("🎬 Analyse Générale des Films et Évaluations")
 
 # Fonction cache pour charger les fichiers parquet
-# @st.cache_data
-# def load_parquet_data(file_name):
-#     file_path = OUTPUT_DIR / file_name
-#     return pd.read_parquet(file_path)
+@st.cache_data
+def load_parquet_data(file_name):
+    file_path = OUTPUT_DIR / file_name
+    return pd.read_parquet(file_path)
 
 # Chargement des données
 genre_df = load_parquet_data("genre_df.parquet")
 genre_rating_stats = load_parquet_data("genre_rating_stats.parquet")
-#st.write(genre_rating_stats.head(10))
+st.write(genre_rating_stats.head(10))
 movies_by_year = load_parquet_data("movies_by_year.parquet")
 top_movies = load_parquet_data("top_movies_by_ratings.parquet")
 ratings_df = load_parquet_data("ratings.parquet")

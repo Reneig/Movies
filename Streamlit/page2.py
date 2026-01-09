@@ -6,13 +6,14 @@ from pathlib import Path
 from utils import load_parquet_data
 
 # Définir le répertoire de sortie
-OUTPUT_DIR = Path(__file__).resolve().parent.parent / "output"
+BASE_DIR = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = BASE_DIR / "Data_visualization" / "output"
 
 st.title("🏷️ Tags Insights")
 
 # Chargement des datasets
 tag_df = load_parquet_data("user_tag_stats.parquet")
-tags_good_rating_df = load_parquet_data("tags_good_rating.parquet")
+tags_good_rating_df = load_parquet_data("tags_good_ratings.parquet")
 tags_compare_df = load_parquet_data("tags_compare.parquet")
 tags_by_genre_df = load_parquet_data("tags_by_genre.parquet")
 

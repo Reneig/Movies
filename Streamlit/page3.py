@@ -8,7 +8,7 @@ from moviemanagement import MovieClient, MovieConfig
 
 @st.cache_resource
 def get_movie_client():
-    config = MovieConfig(movie_base_url="https://movie-backend-xelv.onrender.com")
+    config = MovieConfig(movie_base_url="https://movies-management-0ypw.onrender.com")
     client = MovieClient(config=config)
     client.health_check()
     return client
@@ -16,7 +16,10 @@ def get_movie_client():
 client = get_movie_client()
 
 # === Configuration et chargement des fichiers ===
-output_dir = Path(__file__).resolve().parents[1] / "output"
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# On pointe vers le bon dossier de données
+output_dir = BASE_DIR / "Data_visualization" / "output"
 
 movie_stats = pd.read_parquet(output_dir / "top_movies_by_ratings.parquet")
 genre_df = pd.read_parquet(output_dir / "genre_df.parquet")
