@@ -82,16 +82,21 @@ Before executing the different steps, we first did the following:
 
 # Clone the repository
 
-git clone [https://github.com/votre-repo/movielens-project.git](https://github.com/votre-repo/movielens-project.git)
-cd movielens-project
+git clone [https://github.com/Reneig/Movies.git](https://github.com/Reneig/Movies.git)
 
+```bash
+cd Movies
+```
 # Create the virtual environment
+
+```bash
 python -m venv .venv
 source .venv/bin/activate  # Sur Windows: .venv\Scripts\activate
-
+```
 # Install the dependencies
+```bash
 pip install -r requirements.txt
-
+```
 # Dataset
 
 ---
@@ -352,12 +357,6 @@ To facilitate data exploitation, we have developed and published a Python packag
 
 Translated with DeepL.com (free version)
 
-## 📦 Package Python : `moviemanagement`
-
-Pour faciliter l'exploitation des données, nous avons développé et publié un package Python (SDK) qui fait l'interface entre l'API et l'utilisateur final.
-
-[![PyPI version](https://img.shields.io/pypi/v/moviemanagement.svg)](https://pypi.org/project/moviemanagement/)
-[![PyPI downloads](https://img.shields.io/pypi/dm/moviemanagement.svg)](https://pypi.org/project/moviemanagement/)
 
 ### 🚀 Installation
 Le package est disponible sur le dépôt officiel **PyPI** et peut être installé via `pip` :
@@ -385,5 +384,5 @@ To compile and launch the Streamlit interface on your machine, follow these step
 2. **Run the Streamlit application file**
 
 ```python
- streamlit run movieslens_app.py
-
+ streamlit run movielens_app.py
+```
