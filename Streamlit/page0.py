@@ -1,13 +1,13 @@
 import streamlit as st
 
-# Configuration de la page
+# Page Configuration
 st.set_page_config(
     layout="wide",
-    page_title="MovieLens Analytics - Projet Académique",
+    page_title="Movie Management App",
     page_icon="🎬"
 )
 
-# --- STYLE CSS PERSONNALISÉ ---
+# --- CUSTOM CSS FOR PROFESSIONAL LOOK ---
 st.markdown("""
     <style>
     .main {
@@ -15,54 +15,59 @@ st.markdown("""
     }
     .author-card {
         background-color: #ffffff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        border-radius: 12px;
+        border: 1px solid #e0e0e0;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        transition: transform 0.3s;
     }
-    .phase-container {
-        border-left: 5px solid #28a745;
-        padding-left: 20px;
-        margin-top: 30px;
+    .author-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
     .github-btn {
-        background-color: #24292e;
+        background-color: #1E3A8A;
         color: white !important;
-        padding: 10px 20px;
+        padding: 12px 24px;
         text-decoration: none;
-        border-radius: 5px;
+        border-radius: 8px;
         font-weight: bold;
+        display: inline-block;
+        margin-top: 10px;
+    }
+    h1, h2 {
+        color: #1E3A8A;
     }
     </style>
     """, unsafe_allow_html=True)
 
-# --- EN-TÊTE ---
-st.markdown("<h1 style='text-align: center; color: #1E3A8A;'>🎬 Application of movies management</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; font-size: 1.2em;'>Projet Académique en Science des Données et Architecture Logicielle</p>", unsafe_allow_html=True)
-st.divider()
+# --- HEADER ---
+st.markdown("<h1 style='text-align: center;'>🎬 Movie Management Ecosystem</h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 1.3em; color: #555;'>Academic Project: Data Science & Software Architecture</p>", unsafe_allow_html=True)
+st.write("---")
 
-# --- SECTION ÉQUIPE (AUTEURS) ---
-st.markdown("### 👥 L'Équipe du Projet")
+# --- AUTHORS SECTION ---
+st.subheader("👥 Project Contributors")
 auth_col1, auth_col2, auth_col3 = st.columns(3)
 
 authors = [
     {
         "name": "GBODOGBE Zinsou René",
-        "linkedin": "https://www.linkedin.com/in/rene-gbodogbe",
+        "linkedin": "https://www.linkedin.com/in/gbodogberene/",
         "github": "https://github.com/Reneig",
         "col": auth_col1
     },
     {
         "name": "COMLAN Cybelle",
-        "linkedin": "https://www.linkedin.com/in/cybelle-comlan",
-        "github": "https://github.com/cybelle-c",
+        "linkedin": "https://www.linkedin.com/in/cybelle-comlan-283a62276/",
+        "github": "https://github.com/comlan25",
         "col": auth_col2
     },
     {
-        "name": "DOMINGO Giovani",
-        "linkedin": "https://www.linkedin.com/in/giovani-domingo",
-        "github": "https://github.com/giovani-d",
+        "name": "DOMINGO Giovanni",
+        "linkedin": "https://www.linkedin.com/in/charbel-domingo-marcellin/",
+        "github": "https://github.com/echo-charbel",
         "col": auth_col3
     }
 ]
@@ -71,66 +76,53 @@ for auth in authors:
     with auth["col"]:
         st.markdown(f"""
             <div class="author-card">
-                <h4>{auth['name']}</h4>
-                <a href="{auth['linkedin']}" target="_blank">🔵 LinkedIn</a> | 
-                <a href="{auth['github']}" target="_blank">⚫ GitHub</a>
+                <h4 style="margin-bottom: 10px;">{auth['name']}</h4>
+                <a href="{auth['linkedin']}" target="_blank" style="text-decoration: none; color: #0077b5;">🔵 LinkedIn</a> | 
+                <a href="{auth['github']}" target="_blank" style="text-decoration: none; color: #333;">⚫ GitHub</a>
             </div>
             """, unsafe_allow_html=True)
 
-st.write(" ")
-st.write(" ")
+st.markdown("---")
 
-# --- SECTION CODE SOURCE UNIQUE ---
-st.info("💡 **Note :** L'intégralité du code source (Backend, API et Frontend) est centralisée sur un seul dépôt GitHub.")
-st.markdown(f"""
+# --- CENTRAL REPOSITORY ---
+st.info("💡 **Centralized Codebase:** The entire source code (Backend, API, and Frontend) is hosted on a single GitHub repository.")
+st.markdown("""
     <div style='text-align: center;'>
         <a class="github-btn" href="https://github.com/Reneig/Movies" target="_blank">
-            📂 Accéder au Dépôt GitHub Complet
+            📂 Access Full GitHub Repository
         </a>
     </div>
     """, unsafe_allow_html=True)
 
 st.write(" ")
-st.divider()
 
-# --- DÉTAILS DES PHASES DU PROJET ---
+# --- PROJECT PHASES DETAIL ---
 
-# PHASE 1
-st.markdown("## 🏗️ Phase 1 : Architecture Backend & API")
-col_p1_img, col_p1_text = st.columns([2, 1])
+st.subheader("🚀 Project Scope & Implementation")
 
-with col_p1_img:
-    st.image("https://raw.githubusercontent.com/JosueAfouda/films-analytics/main/streamlit_app/architecture.png", 
-             caption="Architecture de l'API et gestion des données", use_container_width=True)
+col1, col2 = st.columns(2)
 
-with col_p1_text:
+with col1:
+    st.success("### 🏗️ Phase 1: Backend & API")
     st.markdown("""
-    **Objectifs :**
-    * Développement d'un client Python robuste.
-    * Configuration d'une API REST pour la gestion des films.
-    * Mise en place des modèles de données.
-    * Health check et gestion des erreurs de connexion.
+    **Core Infrastructure:**
+    * **Database Design**: Structured SQL modeling using SQLite.
+    * **API Development**: Robust REST API built with **FastAPI**.
+    * **ORM**: Implementation of **SQLAlchemy** for efficient data querying.
+    * **Containerization**: API deployment using **Docker** for scalability.
+    * **Distribution**: Python SDK published on **PyPI** (`moviemanagement`).
     """)
 
-st.write(" ")
-
-# PHASE 2
-st.markdown("## 📊 Phase 2 : Data Analytics & Visualisation")
-col_p2_img, col_p2_text = st.columns([2, 1])
-
-with col_p2_img:
-    st.image("https://raw.githubusercontent.com/JosueAfouda/films-analytics/main/streamlit_app/architecturephase.png", 
-             caption="Pipeline d'analyse et Dashboard Streamlit", use_container_width=True)
-
-with col_p2_text:
+with col2:
+    st.info("### 📊 Phase 2: Analytics & Frontend")
     st.markdown("""
-    **Objectifs :**
-    * Extraction et nettoyage des données MovieLens.
-    * Transformation vers le format Parquet pour la performance.
-    * Analyse exploratoire des genres et des évaluations.
-    * Création d'un dashboard interactif (Streamlit).
+    **Data Insights:**
+    * **Exploratory Data Analysis (EDA)**: Trend identification in user ratings and movie genres.
+    * **Data Management**: Integration of **Pydantic** for data validation.
+    * **Interactive Dashboard**: Full management UI built with **Streamlit**.
+    * **Visualizations**: Dynamic charts to monitor the movie ecosystem.
     """)
 
-# --- PIED DE PAGE ---
-st.divider()
-st.caption("Projet réalisé dans le cadre de la formation AMSE2 - 2026")
+# --- FOOTER ---
+st.write("---")
+st.caption("© 2026 Academic Project - AMSE2 Formation. All rights reserved.")
