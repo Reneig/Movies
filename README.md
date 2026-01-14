@@ -381,8 +381,11 @@ To compile and launch the Streamlit interface on your machine, follow these step
 ```bash
    cd Streamlit
 ```
+For the Movie Explorer page of the application to work, you must wake up the API on Render each time. Here is the link to access the API on Render: ([https://movies-management-0ypw.onrender.com](https://movies-management-0ypw.onrender.com))
+
 2. **Run the Streamlit application file**
 
 ```python
  streamlit run movielens_app.py
 ```
+You can access the application at: ([https://movies-5g88tflnmyxvdhyfqzchou.streamlit.app/](https://movies-5g88tflnmyxvdhyfqzchou.streamlit.app/))
