@@ -363,8 +363,6 @@ To facilitate data exploitation, we have developed and published a Python packag
 [![PyPI version](https://img.shields.io/pypi/v/moviemanagement.svg)](https://pypi.org/project/moviemanagement/)
 [![PyPI downloads](https://img.shields
 
-Translated with DeepL.com (free version)
-
 
 ### 🚀 Installation
 Le package est disponible sur le dépôt officiel **PyPI** et peut être installé via `pip` :
