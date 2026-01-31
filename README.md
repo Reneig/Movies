@@ -176,8 +176,6 @@ movieId,imdbId,tmdbId
 
 ---
 
----
-
 ## Structure  SQLite3 database
 
 To store this data in a SQLite3 database, we define the following structure::
