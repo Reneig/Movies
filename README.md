@@ -341,11 +341,20 @@ If you have Docker installed, you can start the ecosystem without manually confi
 
 ```bash
 # Build the image
-docker build -t moviemanagement-api .
+docker build -t moviesmanagement-api .
 
 # Launch the container
-docker run -p 8000:8000 moviemanagement-api
+docker run -p 8000:8000 moviesmanagement-api
 ```
+
+
+## 🐳 Docker image on Docker Hub
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/gbodogbe/moviesmanagement)](https://hub.docker.com/r/gbodogbe/moviesmanagement)
+
+The Docker image is available on Docker Hub:  
+👉 https://hub.docker.com/r/gbodogbe/moviesmanagement
+
 
 
 ## 📦 Python package: `moviemanagement`
