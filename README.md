@@ -10,7 +10,7 @@
 # 👥 Project Authors
 - **GBODOGBE Zinsou René**
 - **COMLAN Yayra Cybelle**
-- **DOMINGO Giovanni**
+- **DOMINGO MARCELLIN Giovanni**
 
 ---
 
