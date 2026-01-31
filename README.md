@@ -356,7 +356,6 @@ The Docker image is available on Docker Hub:
 👉 https://hub.docker.com/r/gbodogbe/moviesmanagement
 
 
-
 ## 📦 Python package: `moviemanagement`
 
 To facilitate data exploitation, we have developed and published a Python package (SDK) that acts as an interface between the API and the end user.
